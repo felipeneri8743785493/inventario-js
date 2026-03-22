@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Inventario Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="inventory-container">
+        <header>
+            <h1>📦 Control de Mercancía</h1>
+            <p>Gestión de inventario automatizado</p>
+        </header>
+
+        <section class="form-section">
+            <form id="inventory-form">
+                <input type="text" id="name" placeholder="Producto" required>
+                <input type="number" id="quantity" placeholder="Stock Inicial" required min="0">
+                <input type="number" id="price" placeholder="Precio unitario" required step="0.01">
+                <button type="submit" class="btn-add">Agregar al Inventario</button>
+            </form>
+        </section>
+
+        <section class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Total</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="inventory-body">
+                    </tbody>
+            </table>
+        </section>
+
+        <footer class="summary-footer">
+            <div class="total-value">
+                <span>Valor Total del Inventario:</span>
+                <strong id="total-inventory-value">$0.00</strong>
+            </div>
+            <button onclick="clearInventory()" class="btn-clear">Vaciar Inventario</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

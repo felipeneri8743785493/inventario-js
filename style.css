@@ -1,0 +1,102 @@
+:root {
+    --primary: #4a90e2;
+    --success: #2ecc71;
+    --danger: #e74c3c;
+    --dark: #2c3e50;
+    --bg: #b5e9d8;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    padding: 20px;
+}
+
+.inventory-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgb(236, 231, 231);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+header h1 { color: var(--dark); margin-bottom: 5px; }
+header p { color: #888; margin-top: 0; margin-bottom: 25px; }
+
+/* Formulario */
+.form-section form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+input:focus { border-color: var(--primary); }
+
+.btn-add {
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    background: #f8f9fa;
+    padding: 15px;
+    color: #666;
+    border-bottom: 2px solid #eee;
+}
+
+td { padding: 15px; border-bottom: 1px solid #eee; }
+
+.qty-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-qty {
+    padding: 2px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-del { color: var(--danger); cursor: pointer; border: none; background: none; }
+
+/* Footer */
+.summary-footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-value { font-size: 1.2rem; color: var(--dark); }
+.total-value strong { color: var(--primary); margin-left: 10px; }
+
+.btn-clear { background: none; border: 1px solid var(--danger); color: var(--danger); padding: 8px 15px; border-radius: 5px; cursor: pointer; }
+
+@media (max-width: 600px) {
+    .form-section form { grid-template-columns: 1fr; }
+}
